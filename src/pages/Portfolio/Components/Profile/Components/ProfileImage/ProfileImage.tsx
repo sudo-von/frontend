@@ -1,13 +1,13 @@
 import { Hidden } from '@mui/material'
 import { Image } from 'src/components/';
 
-interface ProfileBackgroundProps {
+interface IProfileImage {
     src: string;
 }
 
-const ProfileBackground = ({ src } : ProfileBackgroundProps) =>
+const ProfileImage:React.FC<IProfileImage> = ({ src }) =>
     <Hidden only={['xs', 'sm']}>
         <Image src={src}/>
     </Hidden>
 
-export default ProfileBackground
+export default ProfileImage

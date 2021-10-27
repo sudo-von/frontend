@@ -1,10 +1,10 @@
 import { Bold } from 'src/components';
 
-interface ProfileNameProps {
-    name: any;
+interface IProfileName {
+    name: string;
 }
 
-const ProfileName = ({ name } : ProfileNameProps) =>
+const ProfileName:React.FC<IProfileName> = ({ name }) =>
     <h1><Bold>{name}</Bold></h1>
 
 export default ProfileName

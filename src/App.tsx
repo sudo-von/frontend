@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Portfolio from './pages/Portfolio/Portfolio'
 import { ThemeStore } from 'src/contexts/ThemeContext/ThemeContext'
+import Portfolio from './pages/Portfolio/Portfolio'
 
 const App:React.FC = () => {
   return(

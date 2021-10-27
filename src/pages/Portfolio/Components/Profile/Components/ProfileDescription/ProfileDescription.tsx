@@ -1,8 +1,10 @@
+import { H5 } from 'src/components/'
+
 interface ProfileDescriptionProps {
     children: any;
 }
 
 const ProfileDescription = ({ children } : ProfileDescriptionProps) =>
-    <h5>{children}</h5>
+    <H5>{children}</H5>
 
 export default ProfileDescription

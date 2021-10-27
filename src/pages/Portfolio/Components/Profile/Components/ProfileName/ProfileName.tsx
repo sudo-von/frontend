@@ -1,8 +1,10 @@
+import { Bold } from 'src/components';
+
 interface ProfileNameProps {
     name: any;
 }
 
 const ProfileName = ({ name } : ProfileNameProps) =>
-    <h1><b>{name}</b></h1>
+    <h1><Bold>{name}</Bold></h1>
 
 export default ProfileName

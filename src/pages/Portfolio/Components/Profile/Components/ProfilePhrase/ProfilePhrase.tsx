@@ -1,8 +1,10 @@
+import { Small } from 'src/components';
+
 interface ProfilePhraseProps {
     phrase: string;
 }
 
 const ProfilePhrase = ({ phrase } : ProfilePhraseProps) =>
-    <small>{phrase}</small>
+    <Small>{phrase}</Small>
 
 export default ProfilePhrase

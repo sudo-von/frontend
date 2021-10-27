@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material'
+import { Bold } from 'src/components';
 import ProfileName from './Components/ProfileName/ProfileName'
 import ProfileDescription from './Components/ProfileDescription/ProfileDescription'
 import ProfilePhrase from './Components/ProfilePhrase/ProfilePhrase'
@@ -8,8 +9,8 @@ const Profile = () =>
   <Grid container direction="row" alignItems="center" style={styles.grid}>
     <Grid item xs={12} md={6}>
       <ProfileName name='Jesús Rodríguez'/>
-      <ProfileDescription>Desarrollador web y de aplicaciones móviles</ProfileDescription>
-      <ProfileDescription>Apasionado del hacking ético</ProfileDescription>
+      <ProfileDescription><Bold>Desarrollador web</Bold> y de <Bold>aplicaciones móviles</Bold></ProfileDescription>
+      <ProfileDescription>Apasionado del <Bold>hacking ético</Bold></ProfileDescription>
       <ProfilePhrase phrase='“La única forma de hacer un gran trabajo, es amar lo que haces”.'/>
     </Grid>
     <Grid item md={6}>

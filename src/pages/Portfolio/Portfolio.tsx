@@ -1,7 +1,7 @@
 import { Container } from '@mui/material'
-import Profile from './Components/Profile/Profile'
+import Profile from 'src/pages/Portfolio/Components/Profile/Profile'
 
-const Portfolio = () => 
+const Portfolio:React.FC = () => 
   <Container>
     <Profile/>
   </Container>

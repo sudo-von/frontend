@@ -1,8 +1,8 @@
 import { Grid } from '@mui/material'
-import ProfileName from '../ProfileName/ProfileName'
-import ProfileDescription from '../ProfileDescription/ProfileDescription'
-import ProfilePhrase from '../ProfilePhrase/ProfilePhrase'
-import ProfileBackground from '../ProfileBackground/ProfileBackground'
+import ProfileName from './Components/ProfileName/ProfileName'
+import ProfileDescription from './Components/ProfileDescription/ProfileDescription'
+import ProfilePhrase from './Components/ProfilePhrase/ProfilePhrase'
+import ProfileBackground from './Components/ProfileBackground/ProfileBackground'
 
 const Profile = () =>
   <Grid container direction="row" alignItems="center" style={styles.grid}>

@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Portfolio from './pages/Portfolio/Portfolio'
 
-const App = () => {
+const App:React.FC = () => {
   return(
     <BrowserRouter>
       <Switch>

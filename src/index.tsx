@@ -1,4 +1,5 @@
 import React from 'react';
+import * as types from 'styled-components/cssprop'
 import ReactDOM from 'react-dom';
 import App from './App';
 

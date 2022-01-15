@@ -1,8 +1,8 @@
-import React, { createContext } from 'react'
+import React, { createContext } from 'react';
 import { ThemeProvider as StyledComponentsProvider } from 'styled-components'
-import { GlobalStyles } from './GlobalStyles'
-import { useTheme } from 'src/hooks/useTheme'
-import { lightTheme, darkTheme } from 'src/constants/themes'
+import { GlobalStyles } from './GlobalStyles';
+import { useTheme } from 'src/hooks/useTheme';
+import { lightTheme, darkTheme } from 'src/constants/themes';
 
 const ThemeContext = createContext({})
 

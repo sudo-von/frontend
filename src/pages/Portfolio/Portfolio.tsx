@@ -1,9 +1,12 @@
-import { Container } from '@mui/material'
-import Profile from 'src/pages/Portfolio/Components/Profile/Profile'
+import { Container } from '@mui/material';
+import Profile from 'src/pages/Portfolio/Components/Profile/Profile';
+import Experiencie from 'src/pages/Portfolio/Components/Experiencie/Experiencie';
 
-const Portfolio:React.FC = () => 
+const Portfolio = (): JSX.Element => (
   <Container>
-    <Profile/>
+    <Profile />
+    <Experiencie />
   </Container>
+);
 
-export default Portfolio
+export default Portfolio;

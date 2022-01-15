@@ -1,8 +1,12 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Bold = styled.span`
-  color: ${({ theme: { colors : { secondary } } }) => secondary };
+  color: ${({
+    theme: {
+      colors: { secondary },
+    },
+  }) => secondary};
   font-weight: bold;
-`
+`;
 
-export default Bold
+export default Bold;

@@ -1,10 +1,11 @@
-import { H5 } from 'src/components/'
+import { H5 } from 'src/components';
 
-interface IProfileDescription {
-    children: React.ReactNode | string;
+interface ProfileDescriptionProps {
+  children: React.ReactNode;
 }
 
-const ProfileDescription:React.FC<IProfileDescription> = ({ children }) =>
-    <H5>{children}</H5>
+const ProfileDescription = ({
+  children,
+}: ProfileDescriptionProps): JSX.Element => <H5>{children}</H5>;
 
-export default ProfileDescription
+export default ProfileDescription;

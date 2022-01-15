@@ -1,10 +1,11 @@
 import { Small } from 'src/components';
 
-interface IProfilePhrase {
-    phrase: string;
+interface ProfilePhraseProps {
+  phrase: string;
 }
 
-const ProfilePhrase:React.FC<IProfilePhrase> = ({ phrase }) =>
-    <Small>{phrase}</Small>
+const ProfilePhrase = ({ phrase }: ProfilePhraseProps): JSX.Element => (
+  <Small>{phrase}</Small>
+);
 
-export default ProfilePhrase
+export default ProfilePhrase;

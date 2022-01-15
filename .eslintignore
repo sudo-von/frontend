@@ -1,1 +1,4 @@
 config-overrides.js
+**/*.js
+node_modules
+build

@@ -1,13 +1,14 @@
-import { Hidden } from '@mui/material'
+import { Hidden } from '@mui/material';
 import { Image } from 'src/components/';
 
-interface IProfileImage {
-    src: string;
+interface ProfileImageProps {
+  src: string;
 }
 
-const ProfileImage:React.FC<IProfileImage> = ({ src }) =>
-    <Hidden only={['xs', 'sm']}>
-        <Image src={src}/>
-    </Hidden>
+const ProfileImage = ({ src }: ProfileImageProps): JSX.Element => (
+  <Hidden only={['xs', 'sm']}>
+    <Image src={src} />
+  </Hidden>
+);
 
-export default ProfileImage
+export default ProfileImage;

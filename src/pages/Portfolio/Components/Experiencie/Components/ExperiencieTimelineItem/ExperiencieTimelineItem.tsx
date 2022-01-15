@@ -6,7 +6,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { Bold, H5, H6, Small } from 'src/components';
 
-const ExperiencieTimeLineItem = ({ companyName, role, date }: job) => {
+const ExperiencieTimelineItem = ({ companyName, role, date }: job) => {
   return (
     <TimelineItem>
       <TimelineSeparator>
@@ -24,4 +24,4 @@ const ExperiencieTimeLineItem = ({ companyName, role, date }: job) => {
   );
 };
 
-export default ExperiencieTimeLineItem;
+export default ExperiencieTimelineItem;

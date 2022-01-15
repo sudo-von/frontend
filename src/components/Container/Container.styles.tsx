@@ -1,6 +1,6 @@
 export const styles = {
   grid: {
-    marginTop: 100,
-    marginBottom: 100,
+    marginTop: 250,
+    marginBottom: 250,
   },
 } as const;

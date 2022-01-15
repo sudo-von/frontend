@@ -1,13 +1,12 @@
 import { Grid } from '@mui/material';
-import { Bold } from 'src/components';
-import { styles } from './Profile.styles';
+import { Bold, Container } from 'src/components';
 import ProfileName from './Components/ProfileName/ProfileName';
 import ProfileDescription from './Components/ProfileDescription/ProfileDescription';
 import ProfilePhrase from './Components/ProfilePhrase/ProfilePhrase';
 import ProfileImage from './Components/ProfileImage/ProfileImage';
 
 const Profile = (): JSX.Element => (
-  <Grid container direction="row" alignItems="center" style={styles.grid}>
+  <Container>
     <Grid item xs={12} md={6}>
       <ProfileName name="Jesús Rodríguez" />
       <ProfileDescription>
@@ -21,7 +20,7 @@ const Profile = (): JSX.Element => (
     <Grid item md={6}>
       <ProfileImage src="https://images8.alphacoders.com/101/thumb-1920-1014794.jpg" />
     </Grid>
-  </Grid>
+  </Container>
 );
 
 export default Profile;

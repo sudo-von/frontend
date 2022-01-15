@@ -1,23 +1,19 @@
-import Timeline from '@mui/lab/Timeline';
 import { Grid } from '@mui/material';
-import ExperiencieTimeLineItem from './Components/ExperiencieJob/ExperiencieJob';
-import { job, jobs } from './data';
+import { Container } from 'src/components';
+import ExperiencieDescription from './Components/ExperiencieDescription/ExperiencieDescription';
+import ExperiencieTimeline from './Components/ExperiencieTimeline/ExperiencieTimeline';
+import { jobs } from './data';
 
 const Experiencie = (): JSX.Element => {
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
-      <Grid item xs={12}>
-        <Timeline position="alternate">
-          {jobs.map(({ companyName, role, date }: job) => (
-            <ExperiencieTimeLineItem
-              companyName={companyName}
-              role={role}
-              date={date}
-            />
-          ))}
-        </Timeline>
+    <Container>
+      <Grid item xs={12} md={6}>
+        <ExperiencieDescription />
       </Grid>
-    </Grid>
+      <Grid item xs={12} md={6}>
+        <ExperiencieTimeline jobs={jobs} />
+      </Grid>
+    </Container>
   );
 };
 

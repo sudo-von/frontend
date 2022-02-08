@@ -1,9 +1,9 @@
 import { H2, Bold } from 'src/components';
 
-interface SectionProps {
+type SectionProps = {
   title: string;
   children: React.ReactNode;
-}
+};
 
 const Section = ({ title, children }: SectionProps): JSX.Element => {
   return (

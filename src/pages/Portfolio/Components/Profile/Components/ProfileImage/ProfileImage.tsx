@@ -1,9 +1,9 @@
 import { Hidden } from '@mui/material';
 import { Image } from 'src/components/';
 
-interface ProfileImageProps {
+type ProfileImageProps = {
   src: string;
-}
+};
 
 const ProfileImage = ({ src }: ProfileImageProps): JSX.Element => (
   <Hidden only={['xs', 'sm']}>

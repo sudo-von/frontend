@@ -1,11 +1,4 @@
-type DefaultTheme = {
-  colors: {
-    primary: string;
-    secondary: string;
-    accent: string;
-  };
-  background: string;
-};
+import { DefaultTheme } from 'styled-components';
 
 export const lightTheme: DefaultTheme = {
   colors: {

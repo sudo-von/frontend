@@ -1,8 +1,8 @@
 import { H5 } from 'src/components';
 
-interface ProfileDescriptionProps {
+type ProfileDescriptionProps = {
   children: React.ReactNode;
-}
+};
 
 const ProfileDescription = ({
   children,

@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { IThemeContext } from 'src/contexts/ThemeContext/ThemeContext';
 
-export const useTheme = () => {
+export const useTheme = (): IThemeContext => {
   const [theme, setTheme] = useState(
     window.localStorage.getItem('theme') || 'light',
   );

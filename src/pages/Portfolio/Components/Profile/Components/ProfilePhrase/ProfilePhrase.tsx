@@ -1,8 +1,8 @@
 import { Small } from 'src/components';
 
-interface ProfilePhraseProps {
+type ProfilePhraseProps = {
   phrase: string;
-}
+};
 
 const ProfilePhrase = ({ phrase }: ProfilePhraseProps): JSX.Element => (
   <Small>{phrase}</Small>

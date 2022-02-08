@@ -1,8 +1,8 @@
 import { Bold } from 'src/components';
 
-interface ProfileNameProps {
+type ProfileNameProps = {
   name: string;
-}
+};
 
 const ProfileName = ({ name }: ProfileNameProps): JSX.Element => (
   <h1>

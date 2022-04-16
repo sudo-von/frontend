@@ -1,15 +1,17 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
-import { ThemeStore } from 'src/contexts/ThemeContext/ThemeContext';
+import { screen } from '@testing-library/react';
+import withRendererStore from 'src/hocs/withRendererStore';
+import withRenderStore from 'src/hocs/withRenderStore';
 import Bold from './Bold';
 
-describe('<Bold>Hello world</Bold>', () => {
+describe('Bold component', () => {
   test('Should display a bold text', () => {
-    render(
-      <ThemeStore>
-        <Bold>Hello world</Bold>
-      </ThemeStore>,
-    );
+    withRenderStore(<Bold>Hello world</Bold>);
     expect(screen.getByText('Hello world')).toHaveStyle('font-weight: bold');
+  });
+
+  test('Should render a bold text', () => {
+    const tree = withRendererStore(<Bold>Hello world</Bold>);
+    expect(tree).toMatchSnapshot();
   });
 });

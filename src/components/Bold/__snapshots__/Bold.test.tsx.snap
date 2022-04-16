@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bold component Should render a bold text 1`] = `
+<span
+  className="sc-bdvvtL fhkyxG"
+>
+  Hello world
+</span>
+`;

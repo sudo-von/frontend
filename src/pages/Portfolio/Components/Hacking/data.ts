@@ -23,7 +23,7 @@ export const hackingCards: hacking[] = [
     categories: ['Web', 'Criptografía', 'Forense', 'Ingeniería inversa'],
   },
   {
-    id: '61e49eac0a14a91f5cb84ba5',
+    id: '61e49eac0a14a91f5cb84ba6',
     title: 'Hackdef',
     imageUrl:
       'https://pbs.twimg.com/profile_images/836074595899731968/rzXVnbgh_400x400.jpg',
@@ -32,7 +32,7 @@ export const hackingCards: hacking[] = [
     categories: ['Web', 'Criptografía', 'Forense', 'Ingeniería inversa'],
   },
   {
-    id: '61e49eac0a14a91f5cb84ba5',
+    id: '61e49eac0a14a91f5cb84ba7',
     title: 'Hackdef',
     imageUrl:
       'https://pbs.twimg.com/profile_images/836074595899731968/rzXVnbgh_400x400.jpg',

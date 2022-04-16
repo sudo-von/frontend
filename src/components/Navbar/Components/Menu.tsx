@@ -8,7 +8,6 @@ const Menu = () => {
   return (
     <>
       <Button
-        backgroundColor="transparent"
         onClick={() => setOpen(true)}
         startIcon={<Icon svg={<MenuSvg />} />}
       >

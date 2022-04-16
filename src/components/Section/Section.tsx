@@ -11,7 +11,7 @@ const Section = ({ title, children }: SectionProps): JSX.Element => {
       <H2>
         <Bold>{title}</Bold>
       </H2>
-      <p>{children}</p>
+      {children}
     </div>
   );
 };

@@ -10,6 +10,7 @@ import { hacking, categories as categoryType } from '../../data';
 import { styles } from './HackingCard.styles';
 
 const HackingCard = ({
+  id,
   title,
   imageUrl,
   repositoryUrl,
@@ -21,7 +22,13 @@ const HackingCard = ({
         <CardHeader avatar={<Avatar src={imageUrl} />} title={title} />
         <CardContent>
           {categories.map((category: categoryType) => {
-            return <Chip style={styles.chip} label={category} />;
+            return (
+              <Chip
+                key={`${id}-${category}`}
+                style={styles.chip}
+                label={category}
+              />
+            );
           })}
         </CardContent>
       </CardActionArea>

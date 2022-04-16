@@ -13,6 +13,7 @@ const ExperiencieTimeline = ({
     <Timeline position="alternate">
       {jobs.map(({ companyName, role, date }: job) => (
         <ExperiencieTimelineItem
+          key={`${companyName}-${role}-${date}`}
           companyName={companyName}
           role={role}
           date={date}

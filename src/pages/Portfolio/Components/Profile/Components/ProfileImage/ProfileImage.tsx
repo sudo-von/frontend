@@ -1,4 +1,3 @@
-import { Hidden } from '@mui/material';
 import { Image } from 'src/components/';
 
 type ProfileImageProps = {
@@ -6,9 +5,7 @@ type ProfileImageProps = {
 };
 
 const ProfileImage = ({ src }: ProfileImageProps): JSX.Element => (
-  <Hidden only={['xs', 'sm']}>
-    <Image src={src} />
-  </Hidden>
+  <Image loading="lazy" src={src} />
 );
 
 export default ProfileImage;

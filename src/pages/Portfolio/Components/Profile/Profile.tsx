@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Hidden, Grid } from '@mui/material';
 import { Bold, Container } from 'src/components';
 import ProfileName from './Components/ProfileName/ProfileName';
 import ProfileDescription from './Components/ProfileDescription/ProfileDescription';
@@ -18,7 +18,9 @@ const Profile = (): JSX.Element => (
       <ProfilePhrase phrase="“La única forma de hacer un gran trabajo, es amar lo que haces”." />
     </Grid>
     <Grid item md={6}>
-      <ProfileImage src="https://images8.alphacoders.com/101/thumb-1920-1014794.jpg" />
+      <Hidden only={['xs', 'sm']}>
+        <ProfileImage src="https://images8.alphacoders.com/101/thumb-1920-1014794.jpg" />
+      </Hidden>
     </Grid>
   </Container>
 );

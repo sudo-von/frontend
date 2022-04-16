@@ -1,22 +1,12 @@
 import { Button as MaterialButton } from '@mui/material';
 import styled from 'styled-components';
 
-type ButtonProps = {
-  backgroundColor?: string;
-};
-
-const Button = styled(MaterialButton)<ButtonProps>`
+const Button = styled(MaterialButton)`
   color: ${({
     theme: {
       colors: { primary },
     },
-  }) => primary};
-  background: ${({
-    backgroundColor,
-    theme: {
-      colors: { secondary },
-    },
-  }) => backgroundColor ?? secondary};
+  }) => `${primary} !important`};
 `;
 
 export default Button;

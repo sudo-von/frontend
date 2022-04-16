@@ -6,6 +6,7 @@ import {
   CardContent,
   Chip,
 } from '@mui/material';
+import { Bold } from 'src/components';
 import { hacking, categories as categoryType } from '../../data';
 import { styles } from './HackingCard.styles';
 
@@ -18,8 +19,11 @@ const HackingCard = ({
 }: hacking) => {
   return (
     <Card style={styles.card}>
-      <CardActionArea href={repositoryUrl}>
-        <CardHeader avatar={<Avatar src={imageUrl} />} title={title} />
+      <CardActionArea target="_blank" href={repositoryUrl}>
+        <CardHeader
+          avatar={<Avatar src={imageUrl} />}
+          title={<Bold>{title}</Bold>}
+        />
         <CardContent>
           {categories.map((category: categoryType) => {
             return (

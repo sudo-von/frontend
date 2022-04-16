@@ -23,7 +23,7 @@ const HackingDescription = (): JSX.Element => {
         <br />y así contribuir a la comunidad.
       </p>
       <p>
-        Orgullosamente soy miembro del equipo de ciberseguridad&nbsp;
+        Orgullosamente fui miembro del equipo de ciberseguridad&nbsp;
         <a
           href="https://mobile.twitter.com/mayasteam"
           target="_blank"

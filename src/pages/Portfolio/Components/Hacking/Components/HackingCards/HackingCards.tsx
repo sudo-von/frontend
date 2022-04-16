@@ -11,7 +11,7 @@ const HackingCards = ({ data }: HackingCardsProps): JSX.Element => {
     <Grid container>
       {data.map(
         ({ id, title, imageUrl, repositoryUrl, categories }: hacking) => (
-          <Grid key={id} item sm={12} md={5}>
+          <Grid item key={id} xs={12} sm={6} md={6}>
             <HackingCard
               id={id}
               title={title}

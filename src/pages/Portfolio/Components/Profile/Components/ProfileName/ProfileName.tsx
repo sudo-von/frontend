@@ -1,13 +1,13 @@
-import { Bold } from 'src/components';
+import { Bold, H2 } from 'src/components';
 
 type ProfileNameProps = {
   name: string;
 };
 
 const ProfileName = ({ name }: ProfileNameProps): JSX.Element => (
-  <h1>
+  <H2>
     <Bold>{name}</Bold>
-  </h1>
+  </H2>
 );
 
 export default ProfileName;

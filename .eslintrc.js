@@ -25,6 +25,8 @@ module.exports = {
     "prettier"
   ],
   "rules": {
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
     "prettier/prettier": "error",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/jsx-one-expression-per-line": "off",

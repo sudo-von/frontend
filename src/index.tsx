@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import Router from './routes';
+import Router from './routes/Router';
 
 const container = document.getElementById('root');
 

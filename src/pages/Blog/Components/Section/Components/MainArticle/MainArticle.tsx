@@ -2,7 +2,7 @@ import { Grid } from '@mui/material';
 import { H2, Image, Small, Bold } from 'src/components';
 import { reduceLongText } from 'src/helper/format-text';
 import { styles } from './MainArticle.styles';
-import Category, { CategoryType } from '../Category/Category';
+import Category, { CategoryType } from '../../../Category/Category';
 
 interface EntryProps {
   category: CategoryType;

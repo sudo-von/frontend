@@ -8,5 +8,10 @@ declare module 'styled-components' {
       accent: string;
     };
     background: string;
+    blog: {
+      category: {
+        hacking: string;
+      };
+    };
   }
 }

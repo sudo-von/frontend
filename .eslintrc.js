@@ -25,6 +25,8 @@ module.exports = {
     "prettier"
   ],
   "rules": {
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
     "react/prop-types": "off",
     "react/require-default-props": "off",
     "prettier/prettier": "error",

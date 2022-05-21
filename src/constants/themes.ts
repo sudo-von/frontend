@@ -7,6 +7,11 @@ export const lightTheme: DefaultTheme = {
     accent: '#727272',
   },
   background: '#EAEDF5',
+  blog: {
+    category: {
+      hacking: '#0D0536',
+    },
+  },
 };
 
 export const darkTheme: DefaultTheme = {
@@ -16,4 +21,9 @@ export const darkTheme: DefaultTheme = {
     accent: '#AEAEAE',
   },
   background: '#0F0F26',
+  blog: {
+    category: {
+      hacking: '#05CD54',
+    },
+  },
 };

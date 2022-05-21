@@ -1,5 +1,5 @@
-import { Grid } from '@mui/material';
-import { H2, Image, Small, Bold } from 'src/components';
+import { Grid, Typography } from '@mui/material';
+import { H2, Image, Small, Bold, Subtitle } from 'src/components';
 import { reduceLongText } from 'src/helper/format-text';
 import { styles } from './MainArticle.styles';
 import Category, { CategoryType } from '../../../Category/Category';
@@ -34,7 +34,8 @@ const Section = ({
       container
       justifyContent="center"
       alignItems="center"
-      style={styles.grid}
+      style={styles.container}
+      spacing={5}
     >
       <Grid item xs={12} sm={12} md={6} style={styles.informationGrid}>
         <Category type={category} label="Hacking" />
@@ -42,7 +43,7 @@ const Section = ({
         <H2 style={styles.h2}>
           <Bold>{formatedTitle}</Bold>
         </H2>
-        <Small>{formatedDescription}</Small>
+        <Subtitle>{formatedDescription}</Subtitle>
       </Grid>
       {src && (
         <Grid item xs={12} sm={12} md={6}>

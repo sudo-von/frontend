@@ -9,3 +9,4 @@ export { default as H2 } from './H2/H2';
 export { default as H5 } from './H5/H5';
 export { default as H6 } from './H6/H6';
 export { default as Small } from './Small/Small';
+export { default as Subtitle } from './Subtitle/Subtitle';

@@ -6,21 +6,21 @@ const LatestArticles = () => {
     <Grid container>
       <Grid container justifyContent="flex-start" alignItems="center">
         <SmallArticle
-          title="Discover Weekly"
+          title="Binary Exploitation [pwnable.kr] - (Level 3) Challenge Description"
           date="Sep 25, 2022"
-          src="http://wp.alithemes.com/html/flow/html-demo/assets/imgs/news/thumb-10.jpg"
+          src="https://www.taintedbits.com/2020/05/16/binary-exploitation-pwnable-kr-level-3/func-disassembly.png"
           views={1200}
         />
         <SmallArticle
-          title="Discover Weekly"
+          title="Tw33tchainz binary exploitation writeup"
           date="Sep 25, 2022"
-          src="http://wp.alithemes.com/html/flow/html-demo/assets/imgs/news/thumb-11.jpg"
+          src="https://dimit.me/blog/images/tw33tchainz/intro.png"
           views={1200}
         />
         <SmallArticle
-          title="Discover Weekly"
+          title="Binary Exploitation Deep Dive: Return to LIBC (with Matt)"
           date="Sep 25, 2022"
-          src="http://wp.alithemes.com/html/flow/html-demo/assets/imgs/news/thumb-12.jpg"
+          src="https://technicalnavigator.in/wp-content/uploads/2022/02/Screenshot_20220213_131647.png"
           views={1200}
         />
       </Grid>

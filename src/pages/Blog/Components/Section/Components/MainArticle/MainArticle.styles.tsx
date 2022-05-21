@@ -1,10 +1,9 @@
 export const styles = {
-  grid: {
+  container: {
     marginTop: 50,
     marginBottom: 50,
   },
   informationGrid: {
-    paddingRight: 15,
     marginBottom: 15,
   },
   date: {

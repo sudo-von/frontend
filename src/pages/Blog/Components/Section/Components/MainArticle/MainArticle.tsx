@@ -10,16 +10,25 @@ interface EntryProps {
   date: string;
   description: string;
   src?: string;
+  maxTitleLength?: number;
+  maxDescriptionLength?: number;
 }
 
-const Entry = ({
+const Section = ({
   category,
   title,
   date,
   description,
   src,
+  maxTitleLength,
+  maxDescriptionLength,
 }: EntryProps): JSX.Element => {
-  const formatedText = reduceLongText(description, 220);
+  const formatedTitle = maxTitleLength
+    ? reduceLongText(title, maxTitleLength)
+    : title;
+  const formatedDescription = maxDescriptionLength
+    ? reduceLongText(description, maxDescriptionLength)
+    : description;
   return (
     <Grid
       container
@@ -31,9 +40,9 @@ const Entry = ({
         <Category type={category} label="Hacking" />
         <Small style={styles.date}>{date}</Small>
         <H2 style={styles.h2}>
-          <Bold>{title}</Bold>
+          <Bold>{formatedTitle}</Bold>
         </H2>
-        <Small>{formatedText}</Small>
+        <Small>{formatedDescription}</Small>
       </Grid>
       {src && (
         <Grid item xs={12} sm={12} md={6}>
@@ -44,4 +53,4 @@ const Entry = ({
   );
 };
 
-export default Entry;
+export default Section;

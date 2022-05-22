@@ -38,12 +38,12 @@ import (
 // @tokenUrl http://localhost.com:4000/api/v1/users/login
 func main() {
 
-	log.Println("[main]: Starting a new connection to the database...")
+	log.Println("[main]: Starting a new connection to the database 🤖")
 	db, err := infrastructure.NewMongoDatabase(config.DB_URL, config.DB_NAME, config.DB_USER, config.DB_PASSWORD, config.DB_PORT)
 	if err != nil {
 		log.Panic("[main] error:", err)
 	}
-	log.Println("[main]: database connection established")
+	log.Println("[main]: Database connection established 😁")
 
 	userRepository := mongo.NewMongoUserRepository(db)
 	userService := usecase.NewUserUsecase(userRepository)
@@ -69,7 +69,9 @@ func main() {
 	r.Mount("/api/v1/swagger", httpSwagger.WrapHandler)
 	r.Mount("/api/v1/users", handler.NewUserHandler(userService).Routes())
 
-	if err := http.ListenAndServe(fmt.Sprintf(":%s", config.API_PORT), r); err != nil {
-		log.Printf("[routes] error: %s", err.Error())
+	apiPort := fmt.Sprintf(":%s", config.API_PORT)
+	if err := http.ListenAndServe(apiPort, r); err != nil {
+		log.Printf("[router] Error: %s", err.Error())
 	}
+	log.Printf("[main]: Listening at port %s 🙂", apiPort)
 }

@@ -10,7 +10,6 @@ const docTemplate = `{
     "info": {
         "description": "{{escape .Description}}",
         "title": "{{.Title}}",
-        "termsOfService": "http://swagger.io/terms/",
         "contact": {
             "name": "Jesús \"VoN\" Rodríguez",
             "url": "https://mx.linkedin.com/in/jes%C3%BAs-%C3%A1ngel-rodr%C3%ADguez-mart%C3%ADnez-84991a1b4",
@@ -37,9 +36,9 @@ const docTemplate = `{
 var SwaggerInfo = &swag.Spec{
 	Version:          "1.0.0",
 	Host:             "",
-	BasePath:         "/api/v1",
+	BasePath:         "",
 	Schemes:          []string{},
-	Title:            "Sudo-von API",
+	Title:            "sudo-von API",
 	Description:      "Official documentation to consume the API. You can find out more about this API at https://github.com/sudo-von/frontend.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,

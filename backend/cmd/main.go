@@ -15,8 +15,27 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/cors"
 	"github.com/go-chi/render"
+	httpSwagger "github.com/swaggo/http-swagger"
 )
 
+// @title           Sudo-von API
+// @version         1.0.0
+// @description     Official documentation to consume the API. You can find out more about this API at https://github.com/sudo-von/frontend.
+// @termsOfService  http://swagger.io/terms/
+
+// @securityDefinitions.basic BasicAuth
+
+// @contact.name   Jesús "VoN" Rodríguez
+// @contact.url    https://mx.linkedin.com/in/jes%C3%BAs-%C3%A1ngel-rodr%C3%ADguez-mart%C3%ADnez-84991a1b4
+// @contact.email  sudo.von.contact@gmail.com
+
+// @BasePath  /api/v1
+
+// @securityDefinitions.basic  BasicAuth
+// @securityDefinitions.apiKey BearerJWT
+// @in header
+// @name Authorization
+// @tokenUrl http://localhost.com:4000/api/v1/users/login
 func main() {
 
 	log.Println("[main]: Starting a new connection to the database...")
@@ -47,7 +66,8 @@ func main() {
 
 	r.Use(cors.Handler)
 
-	r.Mount("/users", handler.NewUserHandler(userService).Routes())
+	r.Mount("/api/v1/swagger", httpSwagger.WrapHandler)
+	r.Mount("/api/v1/users", handler.NewUserHandler(userService).Routes())
 
 	if err := http.ListenAndServe(fmt.Sprintf(":%s", config.API_PORT), r); err != nil {
 		log.Printf("[routes] error: %s", err.Error())

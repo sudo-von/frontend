@@ -35,7 +35,7 @@ func (h *BlogHandler) GetBlogs(w http.ResponseWriter, r *http.Request) {
 	}
 
 	blogResponseList := BlogResponseList{
-		Total: total,
+		Total: *total,
 		Blogs: make([]BlogResponse, 0, len(blogs)),
 	}
 

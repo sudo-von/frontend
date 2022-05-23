@@ -13,9 +13,9 @@ type Blog struct {
 }
 
 type BlogUsecase interface {
-	GetBlogs() ([]Blog, int, error)
+	GetBlogs() ([]Blog, *int, error)
 }
 
 type BlogRepository interface {
-	GetBlogs() ([]Blog, int, error)
+	GetBlogs() ([]Blog, *int, error)
 }

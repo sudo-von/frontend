@@ -8,14 +8,14 @@ type Blog struct {
 	Description    string
 	MainPictureURL string
 	Category       string
-	Views          int
+	Views          int64
 	CreationDate   time.Time
 }
 
 type BlogUsecase interface {
-	GetBlogs() ([]Blog, *int, error)
+	GetBlogs() ([]Blog, *int64, error)
 }
 
 type BlogRepository interface {
-	GetBlogs() ([]Blog, *int, error)
+	GetBlogs() ([]Blog, *int64, error)
 }

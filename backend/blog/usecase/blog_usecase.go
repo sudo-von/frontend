@@ -15,7 +15,7 @@ func NewBlogUsecase(blogRepository domain.BlogRepository) *BlogUsecase {
 	}
 }
 
-func (u *BlogUsecase) GetBlogs() ([]domain.Blog, *int, error) {
+func (u *BlogUsecase) GetBlogs() ([]domain.Blog, *int64, error) {
 	blogs, total, err := u.blogRepository.GetBlogs()
 	if err != nil {
 		return nil, nil, fmt.Errorf("GetBlogs: %w", err)

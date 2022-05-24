@@ -8,7 +8,7 @@ import (
 
 type BlogResponseList struct {
 	Blogs []BlogResponse `json:"result"`
-	Total int            `json:"total"`
+	Total int64          `json:"total"`
 }
 
 func (brl *BlogResponseList) Render(w http.ResponseWriter, r *http.Request) error {
@@ -21,7 +21,7 @@ type BlogResponse struct {
 	Description    string    `json:"description"`
 	MainPictureURL string    `json:"main_picture_url"`
 	Category       string    `json:"category"`
-	Views          int       `json:"views"`
+	Views          int64     `json:"views"`
 	CreationDate   time.Time `json:"creation_date"`
 }
 

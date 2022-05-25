@@ -52,25 +52,32 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "category": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "hacking"
                 },
                 "creation_date": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "2021-10-10"
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "How to perform a SQLInjection attack"
                 },
                 "id": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "613aab578a6ef50007e622be"
                 },
                 "main_picture_url": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "https://www.fake-main-picture-url.com/sqlinjection"
                 },
                 "title": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "SQLInjection"
                 },
                 "views": {
-                    "type": "integer"
+                    "type": "integer",
+                    "example": 1000
                 }
             }
         },
@@ -84,7 +91,8 @@ const docTemplate = `{
                     }
                 },
                 "total": {
-                    "type": "integer"
+                    "type": "integer",
+                    "example": 1
                 }
             }
         }

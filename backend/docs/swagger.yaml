@@ -2,18 +2,25 @@ definitions:
   handler.BlogResponse:
     properties:
       category:
+        example: hacking
         type: string
       creation_date:
+        example: "2021-10-10"
         type: string
       description:
+        example: How to perform a SQLInjection attack
         type: string
       id:
+        example: 613aab578a6ef50007e622be
         type: string
       main_picture_url:
+        example: https://www.fake-main-picture-url.com/sqlinjection
         type: string
       title:
+        example: SQLInjection
         type: string
       views:
+        example: 1000
         type: integer
     type: object
   handler.BlogResponseList:
@@ -23,6 +30,7 @@ definitions:
           $ref: '#/definitions/handler.BlogResponse'
         type: array
       total:
+        example: 1
         type: integer
     type: object
 info:

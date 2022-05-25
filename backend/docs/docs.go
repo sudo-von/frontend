@@ -19,7 +19,76 @@ const docTemplate = `{
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
-    "paths": {},
+    "paths": {
+        "/blogs": {
+            "get": {
+                "security": [
+                    {
+                        "BearerJWT": []
+                    }
+                ],
+                "description": "List blogs.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "blogs"
+                ],
+                "summary": "List blogs.",
+                "operationId": "list-blogs",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.BlogResponseList"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "handler.BlogResponse": {
+            "type": "object",
+            "properties": {
+                "category": {
+                    "type": "string"
+                },
+                "creation_date": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "main_picture_url": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "views": {
+                    "type": "integer"
+                }
+            }
+        },
+        "handler.BlogResponseList": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/handler.BlogResponse"
+                    }
+                },
+                "total": {
+                    "type": "integer"
+                }
+            }
+        }
+    },
     "securityDefinitions": {
         "BasicAuth": {
             "type": "basic"

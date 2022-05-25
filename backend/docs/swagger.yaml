@@ -1,3 +1,30 @@
+definitions:
+  handler.BlogResponse:
+    properties:
+      category:
+        type: string
+      creation_date:
+        type: string
+      description:
+        type: string
+      id:
+        type: string
+      main_picture_url:
+        type: string
+      title:
+        type: string
+      views:
+        type: integer
+    type: object
+  handler.BlogResponseList:
+    properties:
+      result:
+        items:
+          $ref: '#/definitions/handler.BlogResponse'
+        type: array
+      total:
+        type: integer
+    type: object
 info:
   contact:
     email: sudo.von.contact@gmail.com
@@ -7,7 +34,23 @@ info:
     this API at https://github.com/sudo-von/frontend.
   title: sudo-von API
   version: 1.0.0
-paths: {}
+paths:
+  /blogs:
+    get:
+      description: List blogs.
+      operationId: list-blogs
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.BlogResponseList'
+      security:
+      - BearerJWT: []
+      summary: List blogs.
+      tags:
+      - blogs
 securityDefinitions:
   BasicAuth:
     type: basic

@@ -26,6 +26,14 @@ func (h *BlogHandler) Routes() chi.Router {
 	return r
 }
 
+// @tags blogs
+// @summary List blogs.
+// @description List blogs.
+// @security BearerJWT
+// @id list-blogs
+// @produce json
+// @success 200 {object} handler.BlogResponseList
+// @router /blogs [get]
 func (h *BlogHandler) GetBlogs(w http.ResponseWriter, r *http.Request) {
 
 	blogs, total, err := h.BlogUsecase.GetBlogs()

@@ -4,11 +4,15 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	_blogHandler "portfolio/backend/blog/delivery/handler"
+	_blogRepository "portfolio/backend/blog/repository/mongo"
+	_blogUsecase "portfolio/backend/blog/usecase"
+
 	"portfolio/backend/config"
 	infrastructure "portfolio/backend/infrastructure/repository/mongo"
-	"portfolio/backend/user/delivery/handler"
-	"portfolio/backend/user/repository/mongo"
-	"portfolio/backend/user/usecase"
+	_userHandler "portfolio/backend/user/delivery/handler"
+	_userRepository "portfolio/backend/user/repository/mongo"
+	_userUsecase "portfolio/backend/user/usecase"
 
 	_ "portfolio/backend/docs"
 
@@ -43,8 +47,10 @@ func main() {
 	}
 	log.Println("[main]: Database connection established 😁")
 
-	userRepository := mongo.NewMongoUserRepository(db)
-	userService := usecase.NewUserUsecase(userRepository)
+	userRepository := _userRepository.NewMongoUserRepository(db)
+	userService := _userUsecase.NewUserUsecase(userRepository)
+	blogRepository := _blogRepository.NewMongoBlogRepository(db)
+	blogService := _blogUsecase.NewBlogUsecase(blogRepository)
 
 	r := chi.NewRouter()
 
@@ -65,7 +71,8 @@ func main() {
 	r.Use(cors.Handler)
 
 	r.Mount("/swagger", httpSwagger.WrapHandler)
-	r.Mount("/users", handler.NewUserHandler(userService).Routes())
+	r.Mount("/users", _userHandler.NewUserHandler(userService).Routes())
+	r.Mount("/blogs", _blogHandler.NewBlogHandler(blogService).Routes())
 
 	apiPort := fmt.Sprintf(":%s", config.API_PORT)
 	if err := http.ListenAndServe(apiPort, r); err != nil {
